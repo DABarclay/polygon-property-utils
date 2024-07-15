@@ -2,9 +2,16 @@
 
 This JavaScript module provides a set of utility functions for calculating properties of polygons using geographical coordinates. These properties include the area and centroid of a polygon, checking if a point is inside a polygon and determining an internal label point for polygons.
 
-## Installation
+### ES6 Import
 
-No installation is required. Simply import the functions into your JavaScript or TypeScript project.
+```javascript
+import {
+  polygonArea,
+  polygonCentroid,
+  isPointInPolygon,
+  polygonInternalLabel,
+} from "polygon-property-util";
+```
 
 ## Functions
 
