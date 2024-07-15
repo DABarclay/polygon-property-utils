@@ -1,0 +1,25 @@
+{
+  "name": "polygon-visual-centre",
+  "version": "0.0.1",
+  "description": "Locate visual centre of a closed and none overlapping polygon shape",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "test": "jest"
+  },
+  "repository": {
+    "url": "https://github.com/DABarclay/polygon-property-utils"
+  },
+  "author": "DABarclay",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.2",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.3"
+  }
+}
