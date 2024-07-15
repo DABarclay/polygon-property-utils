@@ -10,7 +10,7 @@ import {
   polygonCentroid,
   isPointInPolygon,
   polygonInternalLabel,
-} from "polygon-property-util";
+} from "polygon-property-utils";
 ```
 
 ## Functions
