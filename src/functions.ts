@@ -162,6 +162,10 @@ export function polygonInternalLabel(coordinates: Position[]): Position | null {
     closestPoint.point[1] + y,
   ];
 
+  if (!isPointInPolygon(visualCentre, coordinates)) {
+    return closestPoint.point;
+  }
+
   return visualCentre;
 }
 
@@ -277,6 +281,7 @@ function doesLinePassBetweenPoints(
 
   return { pass: false, distance: 0, intersectionPoint: [0, 0] };
 }
+
 function findIntersection(
   central: Position,
   direction: Position,
