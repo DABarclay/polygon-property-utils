@@ -1,6 +1,6 @@
 {
   "name": "polygon-property-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A few functions to get a polygon area, centroid and label location",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
