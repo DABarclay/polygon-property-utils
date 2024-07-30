@@ -140,10 +140,18 @@ export function polygonInternalLabel(coordinates: Position[]): Position | null {
       );
 
       if (pass.pass) {
-        if (smallestDistance === undefined) {
-          smallestDistance = pass;
-        } else if (pass.distance < smallestDistance.distance) {
-          smallestDistance = pass;
+        if (
+          isPointCorrectDirection(
+            centroid,
+            closestPoint.point,
+            pass.intersectionPoint
+          )
+        ) {
+          if (smallestDistance === undefined) {
+            smallestDistance = pass;
+          } else if (pass.distance < smallestDistance.distance) {
+            smallestDistance = pass;
+          }
         }
       }
     }
@@ -167,6 +175,22 @@ export function polygonInternalLabel(coordinates: Position[]): Position | null {
   }
 
   return visualCentre;
+}
+
+function isPointCorrectDirection(
+  centroid: Position,
+  closestPoint: Position,
+  point: Position
+): Boolean {
+  if (centroid[0] < closestPoint[0] !== centroid[0] < point[0]) {
+    return false;
+  }
+
+  if (centroid[1] < closestPoint[1] !== centroid[1] < point[1]) {
+    return false;
+  }
+
+  return true;
 }
 
 function closestPointOnBoundary(
